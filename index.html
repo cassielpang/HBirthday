@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>移动端 H5 仿ios 生日选择插件</title>
+	<meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="css/birthday.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            height:100%;
+            color: #000;
+            background: #fff;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        html * {
+            outline: 0;
+            text-size-adjust: none;
+            -webkit-text-size-adjust: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Hbirth" id="Hbirth" data-status="0">
+        <div class="Hbirth-container">
+            <div class="Hbirth-tool">
+                <p class="Hbirth-cancel">取消</p>
+                <p class="Hbirth-confirm">确定</p>
+            </div>
+            <div class="Hbirth-body">
+                <div class="Hbirth-options" data-id="picker-y">
+                    <div class="Hbirth-rect"></div>
+                    <ul class="Hbirth-year Hbirth-ul" data-id="year">
+                    </ul>
+                </div>
+                <div class="Hbirth-options" data-id="picker-m">
+                    <div class="Hbirth-rect"></div>
+                    <ul class="Hbirth-month Hbirth-ul" data-id="month">
+                        
+                    </ul>
+                </div>
+                <div class="Hbirth-options" data-id="picker-d">
+                    <div class="Hbirth-rect picker-d"></div>
+                    <ul class="Hbirth-date Hbirth-ul" data-id="date">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/HBirthday.js"></script>
+    <script>
+        HDate.init({
+            callback: function (data){
+                alert(data);
+            }
+        });
+    </script>
+</body>
+</html>
